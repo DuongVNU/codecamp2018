@@ -1,0 +1,54 @@
+<!DOCTYPE>
+<html>
+	<head>
+    	<title>Code camp 2018</title>
+    	<link rel="stylesheet" type="text/css" href="Excodecamp.css">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+
+    </head>
+
+	<body>
+		<div class="head">
+			<div style="font-size: 30px; ">MY TO DO LIST</div>
+			<input type="text" placeholder="Typing..." id="text">
+			<button type="button" class="btn btn-primary" onclick="add()">Add</button>
+		</div>
+		<ul id="name">
+			<li>Dương Nguyễn <button type="button" class="btn btn-primary" onclick="remove(this)">&#x2715;</button></li>
+			<li>Tùng Nguyễn <button type="button" class="btn btn-primary" onclick="remove(this)">&#x2715;</button></li>
+			<li>Lê Linh <button type="button" class="btn btn-primary" onclick="remove(this)">&#x2715;</button></li>
+			<li>Thu Trang <button type="button" class="btn btn-primary" onclick="remove(this)">&#x2715;</button></li>
+			<li>Java <button type="button" class="btn btn-primary" onclick="remove(this)">&#x2715;</button></li>
+			<li>Thu Trang <button type="button" class="btn btn-primary" onclick="remove(this)">&#x2715;</button></li>
+			<li>Cáo <button type="button" class="btn btn-primary" onclick="remove(this)">&#x2715;</button></li>
+			<li>Sư tử <button type="button" class="btn btn-primary" onclick="remove(this)">&#x2715;</button></li>
+			<li>Voi <button type="button" class="btn btn-primary" onclick="remove(this)">&#x2715;</button></li>
+			<li>Hươu <button type="button" class="btn btn-primary" onclick="remove(this)">&#x2715;</button></li>
+			<li>Báo <button type="button" class="btn btn-primary" onclick="remove(this)">&#x2715;</button></li>
+			<li>Hổ <button type="button" class="btn btn-primary" onclick="remove(this)">&#x2715;</button></li>
+
+		</ul>
+		<script>
+			function add() {
+				var value = document.getElementById("text").value;
+				if (value.length > 0){
+					var node = document.createElement("LI");
+					node.innerHTML = value + "<button type='button' class='btn btn-primary' id='button'   onclick='remove(this)'>&#x2715;</button>";
+					document.getElementById('name').appendChild(node);
+					document.getElementById('text').value = "";
+					document.getElementById('text').focus();
+				}else {
+					alert("Don't empty");
+					document.getElementById('text').focus();
+				}
+			
+			}
+
+			function remove(e) {
+				e.parentNode.parentNode.removeChild(e.parentNode);
+			}
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,79 @@
+*{
+	margin: 0;
+	padding: 0;
+    font-family: 'Pacifico', cursive;
+}
+										/*Ẩn scroll*/
+::-webkit-scrollbar {
+	display: none;
+}
+
+
+body{
+	position: static;
+}
+.head{
+	background: #c3d4de;
+	text-align: center;
+	padding:20px;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+}
+
+.head input {
+	height: 50px;
+	width: 70%;
+	border-radius:8px;
+	border: none; 
+}
+.head button {
+	border-radius: 5px;
+	height: 50px;
+	width: 150px;
+	border: none;
+	background: #2ab7e5;
+}
+#name{
+	z-index: 0;
+	position: absolute;
+	top:143px;
+	width: 100%;
+	}
+
+.head button:hover{
+	background-color: #2e86a2;
+	transition: 0.5s;
+}
+
+#name li{
+	list-style-type: none;
+	position: relative;
+	background:linear-gradient(to right,pink,#74f0f7);
+	height: 50px;
+	line-height: 50px;
+	padding-left: 20px;
+	
+}
+#name li:hover{
+	transition: 0.5s;
+	background:linear-gradient(to right,#74f0f7,pink);
+
+}
+
+#name li:hover button{
+	background: pink;
+}
+
+#name button{
+	height: 50px;
+	position: absolute;
+	right:0;
+	width: 50px;
+	background: #74f0f7;
+	border: none;
+}
+#name li button:hover{
+	background: #ea4335;
+	transition: 0.25s
+}
