@@ -26,6 +26,7 @@ body{
 	width: 70%;
 	border-radius:8px;
 	border: none; 
+	outline: none;
 }
 .head button {
 	border-radius: 5px;
@@ -33,6 +34,7 @@ body{
 	width: 150px;
 	border: none;
 	background: #2ab7e5;
+	outline: none;
 }
 #name{
 	z-index: 0;
@@ -72,8 +74,14 @@ body{
 	width: 50px;
 	background: #74f0f7;
 	border: none;
+	outline: none;
 }
 #name li button:hover{
-	background: #ea4335;
+	background: #ea626f;
 	transition: 0.25s
+}
+
+#name li button:active{
+	background: #ea4335;
+	transition: 0.2s
 }
